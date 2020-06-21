@@ -1,0 +1,16 @@
+/*-------recent-app-screen-------*/
+
+#recent-apps-screen{
+	width: 280px;
+	height: 500px;
+	position: absolute;
+	top: 20px;
+	background-color: rgba(0,0,0,0.8);
+	display: none;
+}
+
+#destroy-recent-apps{
+	color: white;
+	font-size: 2em;
+	float: right;
+}

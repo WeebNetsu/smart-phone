@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Phone</title>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" type="text/css" href="style/general.css">
+	<link rel="stylesheet" type="text/css" href="style/phone.css">
+	<link rel="stylesheet" type="text/css" href="style/phone-screen.css">
+	<link rel="stylesheet" type="text/css" href="style/notifications.css">
+	<link rel="stylesheet" type="text/css" href="style/recent-apps.css">
+	<link rel="stylesheet" type="text/css" href="style/app-menu.css">
+	<link rel="stylesheet" type="text/css" href="style/app-styles/call-app.css">
+	<link rel="stylesheet" type="text/css" href="style/app-styles/camera-app.css">
+
+	<!-- FontAwesome -->
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+
+	<!-- Bootstrap 4 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<div id="holder">
+		<div id="body">
+			<div id="phone-top">
+				<div id="speaker"></div>
+				<div id="camera">
+					<div id="mini-cam"></div>
+				</div>
+				<div id="flash"></div>
+			</div>
+
+			<div id="screen">
+				<div id="lockscreen" onclick="unlock()"> <!-- touch to unlock -->
+					<div class="time" id="lockscreen-time"></div>
+					<div class="date" id="lockscreen-date"></div>
+				</div>
+
+				<div id="normal-screen">
+					<section id="status-bar">
+						<div class="time" id="status-bar-time"></div>
+						<div id="battery"><i class="fa fa-battery-empty" id="battery-icon"></i></div>
+						<div id="signal">4G<i class="fa fa-signal"></i></div>
+					</section>
+
+					<div id="notification-box">
+						<!-- 
+							notification-message - the message in the notification
+							notification-timer - how long the notification will stay visible
+						 -->
+						<div id="notification-message"></div>
+						<!-- <div id="notification-timer">
+							<progress value="0" max="100" id="notification-timer-progress"></progress>
+						</div> -->
+
+						<div id="notification-buttons">
+							<button onclick="endNotification(true)">Open</button>
+							<button onclick="endNotification(false)">Close</button>
+						</div>
+					</div>
+
+					<section id="bottom-menu-bar">
+						<div onclick="phone()"><i class="fa fa-phone hover" id="phone-button"></i></div>
+						<div onclick="camera()"><i class="fa fa-camera hover" id="camera-button"></i></div>
+						<div onclick="appMenu()"><i class="fa fa-ravelry hover" id="menu-button"></i></div>
+					</section>
+
+					<section id="app-menu">
+						
+					</section>
+				</div>
+
+				<div id="vertical-app-screens">
+					<section id="recent-apps-screen">
+						<div><i class="fa fa-eraser hover" id="destroy-recent-apps" title="remove recent apps" onclick="cleanApps()"></i></div>
+					</section>
+
+					<section id="call-screen">
+						<div class="container">
+							<div id="call-output"></div>
+
+							<div class="row dial-row">
+								<div class="digit" id="one">1</div>
+
+								<div class="digit" id="two">2
+									<div class="sub">ABC</div>
+								</div>
+
+								<div class="digit" id="three">3
+									<div class="sub">DEF</div>
+								</div>
+							</div>
+
+							<div class="row dial-row">
+								<div class="digit" id="four">4
+									<div class="sub">GHI</div>
+								</div>
+
+								<div class="digit" id="five">5
+									<div class="sub">JKL</div>
+								</div>
+
+								<div class="digit">6
+									<div class="sub">MNO</div>
+								</div>
+							</div>
+
+							<div class="row dial-row">
+								<div class="digit">7
+									<div class="sub">PQRS</div>
+								</div>
+
+								<div class="digit">8
+									<div class="sub">TUV</div>
+								</div>
+
+								<div class="digit">9
+									<div class="sub">WXYZ</div>
+								</div>
+							</div>
+
+							<div class="row dial-row">
+								<div class="digit">*</div>
+								<div class="digit">0</div>
+								<div class="digit">#</div>
+							</div>
+
+							<div id="bottom-row">
+								<div id="call-button" onclick="call()"><i class="fa fa-phone"></i></div>
+								<i class="fa fa-long-arrow-left" id="remove-num"></i>
+							</div>
+						</div>
+					</section>
+
+					<section id="camera-screen">
+						<div id="camera-top">
+							<div id="camera-settings">
+								<i class="fa fa-cogs"></i>	
+							</div>
+
+							<div id="camera-flash">
+								<i class="fa fa-bolt"></i>
+							</div>
+
+							<div id="camera-mode">
+								<p>MODE</p>
+							</div>
+						</div>
+
+						<div id="camera-middle">
+							<video id="camera-video" autoplay></video>
+							<canvas id="camera-canvas" width="640" height="480"></canvas>
+						</div>
+
+						<div id="camera-bottom">
+							<div id="camera-switch">
+								<i class="fa fa-video-camera" id="camera-switch-video"></i>
+								<i class="fa fa-camera-retro" id="camera-switch-camera"></i>
+							</div>
+
+							<div id="camera-action-button">
+								<div id="snap"></div>
+							</div>
+
+							<div id="camera-gallery">
+								<img src="src/Images/wallpaper_1.jpg">
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+
+			<div id="phone-bottom">
+				<div id="back" onclick="back()"><i class="fa fa-chevron-left"></i></div>
+				<div id="button" onclick="home()"></div>
+				<div id="menu" onclick="recentApps()"><i class="fa fa-window-restore"></i></div>
+			</div>
+		</div>
+
+
+		<div id="power-btn" onclick="power()"></div>
+		<div id="sound-btn">
+			<div id="sound-top" onclick="soundUp()"></div>
+			<div id="sound-bottom" onclick="soundDown()"></div>
+		</div>
+	</div>
+	
+	<!-- JavaScript -->
+	<script type="text/javascript" src="script/main.js"></script>
+	<script type="text/javascript" src="script/buttons.js"></script>
+	<script type="text/javascript" src="script/fx.js"></script>
+	<script type="text/javascript" src="script/notification-popup.js"></script>
+	<script type="text/javascript" src="script/background.js"></script>
+	<script type="text/javascript" src="script/screen.js"></script>
+	<script type="text/javascript" src="script/Blob.js"></script>
+	<script type="text/javascript" src="script/canvas-toBlob.js"></script>
+	<script type="text/javascript" src="script/file-saver.js"></script>
+
+	<!-- imports all app data after basic functions were loaded -->
+	<script type="text/javascript" src="script/import-apps.js"></script>
+</body>
+</html>

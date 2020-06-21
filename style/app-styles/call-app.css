@@ -1,0 +1,78 @@
+/*Call screen*/
+
+#call-screen{
+  width: 100%;
+  height: 497px;
+  position: absolute;
+  top: 23px;
+  background-color: white;
+  display: none;
+}
+
+#call-output{
+  font-family: "Exo";
+  font-size: 2rem;
+  height: 60px;
+  font-weight: bold;
+  color: #1976d2;
+  text-align: center;
+}
+
+.dial-row{
+  margin: 0 auto;
+  width: 280px;
+  clear: both;
+  text-align: center;
+  font-family: 'Exo';
+}
+
+.digit{
+  padding: 10px 30px;
+  width: 30px;
+  font-size: 2rem;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.digit:hover{
+  background-color: #ccc;
+}
+
+.sub{
+  font-size: 0.8rem;
+  color: grey;
+  position: relative;
+  right: 10px;
+}
+
+#bottom-row{
+  margin: 0 auto;
+  width: 280px;
+  clear: both;
+  text-align: center;
+  font-family: 'Exo';
+  padding-top: 10px;
+}
+
+#call-button{
+  display: inline-block;
+  background-color: #66bb6a;
+  padding: 4px 30px;
+  margin: 10px;
+  color: white;
+  border-radius: 4px;
+  float: left;
+  cursor: pointer;
+  width: 180px;
+}
+
+#call-button:hover{
+  background-color: #81c784;
+}
+
+#remove-num{
+  width: 30px;
+  cursor: pointer;
+  padding: 17px;
+  margin-right: 40px;
+}

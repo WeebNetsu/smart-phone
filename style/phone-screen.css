@@ -1,0 +1,122 @@
+/*----SCREEN----*/
+.hover:hover{ /*For anything hoverable*/
+	cursor: pointer;
+}
+
+#screen{
+	position: relative;
+	left: 10px;
+	background-color: #222;
+	border: 1px solid black;
+	width: 280px;
+	height: 520px;
+}
+
+#screen:hover{
+	cursor: default;
+}
+
+#lockscreen{
+	position: absolute;
+	background-image: url(../src/Images/wallpaper_1.jpg);
+	width: 280px;
+	height: 520px;
+	font-family: sans-serif;
+}
+
+#lockscreen-time{
+	font-size: 5em;
+	opacity: 0.7;
+	color: white;
+	text-align: center;
+	position: relative;
+	top: 0.6em;	
+
+}
+
+#lockscreen-date{
+	font-size: 1.2em;
+	color: white;
+	text-align: center;
+	position: relative;
+	top: 1.7em;
+}
+
+/*-------Normal Screen------------*/
+
+#normal-screen{
+	background-image: url(../src/Images/wallpaper_2.jpg);
+	width: 280px;
+	height: 520px;
+	background-size: cover;
+}
+
+#status-bar{
+	width: 280px;
+	height: 20px;
+	background-color: rgba(34,34,34, 0.5);
+	color: white;
+}
+
+#status-bar-time{
+	position: relative;
+	left: 85%;
+	top: 4px;
+	display: inline-block;
+}
+
+#battery{
+	position: relative;
+	top: 2px;
+	left: 63%;
+	display: inline-block;
+	color: red;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+#signal{
+	position: relative;
+	top: 2px;
+	left: 44%;
+	display: inline-block;
+	font-size: 13px;
+}
+
+/*-------Bottom-Screen-Menu-------*/
+
+#phone-button{
+	position: absolute;
+	font-size: 47px;
+	color: white;
+	transition: 0.5s;
+	left: 2%;
+}
+
+#bottom-menu-bar{
+	position: absolute;
+	/*background-color: red;*/
+	width: 280px;
+	height: 50px;
+	top: 470px;
+}
+
+#camera-button{
+	color: white;
+	position: absolute;
+	font-size: 44px;
+	transition: 0.5s;
+	left: 20%;
+}
+
+#menu-button{
+	position: absolute;
+	left: 37%;
+	font-size: 47px;
+	color: white;
+	transition: 0.5s;
+}
+
+#menu-button:hover{
+	color: #999;
+}

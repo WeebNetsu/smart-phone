@@ -1,0 +1,180 @@
+/*--------PHONE (OUTSIDE)-------*/
+
+#holder{
+	/*border: 1px solid black;*/
+	position: absolute;
+	width: 310px;
+	height: 600px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#body{
+	border: 1px solid black;
+	position: absolute;
+	width: 300px;
+	height: 600px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 24px;
+	background-color: #111;
+}
+
+#power-btn{
+	border: none;
+	position: absolute;
+	width: 5px;
+	height: 50px;
+	right: 0%;
+	top: 15%;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	background-color: #111;
+}
+
+#power-btn:hover{
+	cursor: pointer;
+	background-color: #333;
+}
+
+#sound-btn{
+	border: none;
+	position: absolute;
+	width: 5px;
+	height: 100px;
+	right: 0%;
+	top: 25%;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	background-color: #111;
+}
+
+#sound-top{
+	position: relative;
+	height: 50px;
+	width: 5px;
+	border-top-right-radius: 4px;
+}
+
+#sound-top:hover{
+	background-color: #333;
+	cursor: pointer;
+}
+
+#sound-bottom{
+	position: relative;
+	height: 50px;
+	width: 5px;
+	border-bottom-right-radius: 4px;
+}
+
+#sound-bottom:hover{
+	background-color: #333;
+	cursor: pointer;
+}
+
+/*-----PHONE (INSIDE)---------*/
+
+#phone-top{
+	/*background-color: red;*/
+	position: relative;
+	width: 350px;
+	height: 30px;
+}
+
+#speaker{
+	position: absolute;
+	background-color: #222;
+	width: 80px;
+	height: 10px;
+	left: 43%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 5px;
+}
+
+#camera{
+	position: absolute;
+	background-color: #333;
+	width: 15px;
+	height: 15px;
+	left: 70%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+}
+
+#mini-cam{
+	position: absolute;
+	width: 5px;
+	height: 5px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	border: 1px solid #555;
+}
+
+#flash{
+	position: absolute;
+	background-color: #ccc;
+	width: 10px;
+	height: 10px;
+	left: 75%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+}
+
+/*-------Bottom-------*/
+
+#back{
+	position: relative;
+	width: 110px;
+	height: 30px;
+	top: 12px;
+	left: -10px;
+	text-align: center;
+	font-size: 20px;
+	color: #ccc;
+}
+
+#back:hover{
+	color: #fff;
+	cursor: pointer;
+}
+
+#button{
+	position: relative;
+	background-color: #111;
+	width: 80px;
+	height: 30px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	top: -20px;
+	border-radius: 10px;
+	border: 2px solid black;
+}
+
+#button:hover{
+	background-color: #222;
+	cursor: pointer;
+}
+
+#menu{
+	position: absolute;
+	width: 80px;
+	height: 30px;
+	top: 560px;
+	left: 70%;
+	text-align: center;
+	font-size: 20px;
+	color: #ccc;
+}
+
+#menu:hover{
+	color: #fff;
+	cursor: pointer;
+}

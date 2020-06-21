@@ -1,0 +1,10 @@
+/*--------App-Menu-----*/
+
+#app-menu{
+	height: 445px;
+	width: 270px;
+	background-color: white;
+	position: absolute;
+	left: 5px;
+	display: none;
+}
